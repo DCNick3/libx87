@@ -79,7 +79,7 @@ namespace libx87 {
             cglue()->read16(linear_address, value);
         }
         inline int  cpu_access_verify(uint32_t start, uint32_t end) {
-            cglue()->access_verify(start, end);
+            return cglue()->access_verify(start, end);
         }
         inline void cpu_set_cf(bool value) {
             cglue()->set_cf(value);
